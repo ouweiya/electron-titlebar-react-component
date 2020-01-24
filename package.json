@@ -1,6 +1,6 @@
 {
   "name": "electron-titlebar-react-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "keywords": [
     "electron",
@@ -13,10 +13,10 @@
     "email": "higogle1@gmail.com"
   },
   "description": "electron Simple toolbar, providing windows and Mac style, contains three functions, maximize, minimize, close.",
-  "homepage": "https://github.com/ouweiya/react-electron-titlebar.git",
-  "repository": "https://github.com/ouweiya/react-electron-titlebar.git",
+  "homepage": "https://github.com/ouweiya/electron-titlebar-react-component.git",
+  "repository": "https://github.com/ouweiya/electron-titlebar-react-component.git",
   "bugs": {
-    "url": "https://github.com/ouweiya/react-electron-titlebar.git/issues"
+    "url": "https://github.com/ouweiya/electron-titlebar-react-component.git/issues"
   },
   "license": "MIT",
   "babel": {
