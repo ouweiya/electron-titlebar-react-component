@@ -1,6 +1,6 @@
 {
   "name": "electron-titlebar-react-component",
-  "version": "0.2.2",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "keywords": [
     "electron",
@@ -34,7 +34,8 @@
     "react-scripts": "3.3.0"
   },
   "scripts": {
-    "build": "babel src -d dist --copy-files"
+    "build": "babel src -d dist --copy-files",
+    "pub": "yarn publish --patch"
   },
   "eslintConfig": {
     "extends": "react-app"
