@@ -4,7 +4,6 @@ import clsx from 'clsx';
 
 const Titlebar = ({ className, ...other }) => {
   const maximize = useRef();
-  // Only execute "remote.getCurrentWindow" in Electron environment
 
   let wind = null;
   if (window.remote) {
@@ -31,19 +30,19 @@ const Titlebar = ({ className, ...other }) => {
 
   return (
     <div className={clsx(styles['window-controls-container'], className)} {...other}>
-      <div className={styles['wrap']} id='min-btn' onClick={handlerMin}>
+      <div className={styles['wrap']} id='min-btn' onClick={window.remote ? handlerMin : null}>
         <div className={clsx(styles['window-icon-bg'], styles['one'])}>
           <div className={clsx(styles['window-icon'], styles['window-minimize'])} />
         </div>
       </div>
 
-      <div className={styles['wrap']} id='max-btn' onClick={handlerMax}>
+      <div className={styles['wrap']} id='max-btn' onClick={window.remote ? handlerMax : null}>
         <div className={clsx(styles['window-icon-bg'], styles['two'])}>
           <div className={clsx(styles['window-icon'], styles['window-maximize'])} ref={maximize} />
         </div>
       </div>
 
-      <div className={styles['wrap']} id='close-btn' onClick={handlerClose}>
+      <div className={styles['wrap']} id='close-btn' onClick={window.remote ? handlerClose : null}>
         <div className={clsx(styles['window-icon-bg'], styles['window-close-bg'])}>
           <div className={clsx(styles['window-icon'], styles['window-close'])} />
         </div>

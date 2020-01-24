@@ -8,8 +8,7 @@ const Titlebar = ({
   className,
   ...other
 }) => {
-  const maximize = useRef(); // Only execute "remote.getCurrentWindow" in Electron environment
-
+  const maximize = useRef();
   let wind = null;
 
   if (window.remote) {
@@ -36,18 +35,18 @@ const Titlebar = ({
     className: clsx(styles['window-controls-container'], className)
   }, other), React.createElement("div", {
     className: clsx(styles['window-icon-bg']),
-    onClick: handlerMin
+    onClick: window.remote ? handlerMin : null
   }, React.createElement("div", {
     className: clsx(styles['window-icon'], styles['window-minimize'])
   })), React.createElement("div", {
     className: clsx(styles['window-icon-bg']),
-    onClick: handlerMax
+    onClick: window.remote ? handlerMax : null
   }, React.createElement("div", {
     className: clsx(styles['window-icon'], styles['window-maximize']),
     ref: maximize
   })), React.createElement("div", {
     className: clsx(styles['window-icon-bg'], styles['window-close-bg']),
-    onClick: handlerClose
+    onClick: window.remote ? handlerClose : null
   }, React.createElement("div", {
     className: clsx(styles['window-icon'], styles['window-close'])
   })));
