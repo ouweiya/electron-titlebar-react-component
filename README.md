@@ -28,7 +28,7 @@ public\index.html
 ```
 
 ```jsx
-'src\App.js;';
+'src\App.js';
 
 import React from 'react';
 import { TitlebarWid, TitlebarMac } from 'electron-titlebar-react-component';
